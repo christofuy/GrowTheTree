@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed=5f;
-    public Rigidbody rb;
+    public Rigidbody2D rb;
     public Camera cam;
 
-    Vector3 movement;
-    Vector3 mousePos;
+    Vector2 movement;
+    Vector2 mousePos;
 
     // Update is called once per frame
     void Update() {
@@ -20,9 +20,9 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate(){
         rb.MovePosition(rb.position+movement * moveSpeed * Time.fixedDeltaTime);
 
-        Vector3 lookDir=mousePos-rb.position;
-        lookDir.z=0;
-        rb.rotation=Quaternion.LookRotation(lookDir);
+        Vector2 lookDir=mousePos-rb.position;
+        float angle = Mathf.Atan2(lookDir.y,lookDir.x)*Mathf.Rad2Deg - 90f;
+        rb.rotation=angle;
     }
 
     private void UpdateMovement(){
