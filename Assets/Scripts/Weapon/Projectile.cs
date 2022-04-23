@@ -1,11 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    public int damage;
+    public GameObject impactEffect;
+
     void OnCollisionEnter2D(Collision2D collision){
-        // instantiate hit effect here, and clean up hit effect after
+        Instantiate(impactEffect, transform.position, Quaternion.identity);
+        Enemy enemy = collision.collider.GetComponent<Enemy>();
+        if(enemy!=null){
+            enemy.TakeDamage(damage);
+        }
         Destroy(gameObject);
     }
 }
