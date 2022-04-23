@@ -31,6 +31,7 @@ public class Weapon : MonoBehaviour
         Collider2D[] hitEnemies=Physics2D.OverlapCircleAll(attackSource.position,weaponStats.meleeAttackRange,enemyLayers);
         foreach(Collider2D enemy in hitEnemies){
             Debug.Log("We hit " + enemy.name);
+            enemy.GetComponent<Enemy>().TakeDamage(weaponStats.damageModifier);
         }
     }
 
