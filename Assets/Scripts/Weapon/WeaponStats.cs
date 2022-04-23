@@ -8,6 +8,7 @@ public class WeaponStats : ScriptableObject
     new public string name = "Weapon Name";
     public WeaponType type;
     public Sprite sprite = null;
+    public int damageModifier;
     public float meleeAttackRange = 0.5f;
     public float projectileForce = 20f;
     public GameObject projectilePrefab;
