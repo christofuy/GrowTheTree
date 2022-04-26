@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveToCenter : MonoBehaviour
+public class Termite : MonoBehaviour
 {
     public GameObject tree;
     public SpriteRenderer spriteRenderer;
