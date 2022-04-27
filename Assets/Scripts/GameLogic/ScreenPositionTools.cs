@@ -19,6 +19,14 @@ public static class ScreenPositionTools
         return camera.ScreenToWorldPoint(randomScreenLocation);
     }
 
+
+    //Used for items that just spawn
+    public static Vector3 RandomWorldLocationNoCamera()
+    {
+        Vector3 randomScreenLocation = RandomScreenLocation();
+        return Camera.main.ScreenToWorldPoint(randomScreenLocation);
+    }
+
     public static Vector3 RandomTopOfScreenLocation()
     {
         float randomX = Random.Range(0, Screen.width);
