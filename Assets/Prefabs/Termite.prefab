@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6729255319502122442}
   - component: {fileID: 6729255319502122443}
   - component: {fileID: 6729255319502122445}
-  - component: {fileID: 6729255319502122444}
   - component: {fileID: -8737720472373809838}
   m_Layer: 6
   m_Name: Termite
@@ -111,20 +110,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.17, y: 0.63}
   m_EdgeRadius: 0
---- !u!114 &6729255319502122444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6729255319502122441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61cd5bd103aad42128f8c64557d07d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  deathEffect: {fileID: 8316886109341123589, guid: 19b8d3776ebee4633ace8ad6cedb90d4, type: 3}
 --- !u!114 &-8737720472373809838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73bfcf4a5683a4ac3b5a3a8f64741c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  deathEffect: {fileID: 8316886109341123589, guid: 19b8d3776ebee4633ace8ad6cedb90d4, type: 3}
   tree: {fileID: 6854871408739480392, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
   spriteRenderer: {fileID: 6729255319502122443}
   speed: 1

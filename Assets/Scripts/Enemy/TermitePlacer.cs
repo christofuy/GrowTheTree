@@ -6,6 +6,8 @@ public class TermitePlacer : MonoBehaviour
 {
 
     public GameObject TermitePrefab;
+    public Camera viewcamera;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +23,13 @@ public class TermitePlacer : MonoBehaviour
 
     public Vector3 RandomPosition()
     {
-        float min = 0.0f;
-        float max = 1f;
+        //float min = 0.0f;
+        //float max = 1f;
 
-        Vector3 final = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(min, max), 1, 10));
-        return final;
+        Vector3 spawn = ScreenPositionTools.RandomEdgeOfScreenWorldLocation(viewcamera, "top");
+
+        //Vector3 final = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(min, max), 1, 10));
+        return spawn;
     }
 
 
