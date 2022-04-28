@@ -12,7 +12,7 @@ public class TermitePlacer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Place(5);
+        Place(GameParameters.TermiteSpawnAmount);
     }
 
     // Update is called once per frame
