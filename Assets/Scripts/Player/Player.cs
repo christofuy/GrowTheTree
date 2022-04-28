@@ -5,20 +5,21 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int maxMagic = 100;
-    public int currentMagic;
+    public int currentMagic = 0;
     public MagicBar magicbar;
 
     void Start()
     {
         currentMagic = maxMagic;
-        magicbar.SetMaxMagic(maxMagic);
+        magicbar.SetMaxMagic();
     }
 
-    public bool MagicMeterNotEmpty(int currentMagic)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (currentMagic <= 0) {
-            return false;
+        if (collision.gameObject.tag == "Fruit")
+        {
+            magicbar.GainMagic(currentMagic);
+            print("Collected fruit");
         }
-        return true;
     }
 }
