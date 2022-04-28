@@ -21,14 +21,33 @@ public class TermitePlacer : MonoBehaviour
 
     }
 
-    public Vector3 RandomPosition()
+    public Vector3 RandomSpawnDirection()
     {
-        //float min = 0.0f;
-        //float max = 1f;
+        int spawnDirection = Random.Range(0, 4);
+        string finalDirection = "";
 
-        Vector3 spawn = ScreenPositionTools.RandomEdgeOfScreenWorldLocation(viewcamera, "top");
-
-        //Vector3 final = Camera.main.ViewportToWorldPoint(new Vector3(Random.Range(min, max), 1, 10));
+        if (spawnDirection == 0)
+        {
+            finalDirection = "top";
+        }
+        else if (spawnDirection == 1)
+        {
+            finalDirection = "right";
+        }
+        else if (spawnDirection == 2)
+        {
+            finalDirection = "bottom";
+        }
+        else if (spawnDirection == 3)
+        {
+            finalDirection = "left";
+        }
+        else
+        {
+            print("There was an error in generating a randomized spawn direction");
+        }
+        print("Direction = " + finalDirection);
+        Vector3 spawn = ScreenPositionTools.RandomEdgeOfScreenWorldLocation(viewcamera, finalDirection);
         return spawn;
     }
 
@@ -39,7 +58,7 @@ public class TermitePlacer : MonoBehaviour
         int i = 0;
         while (i < limit)
         {
-            Instantiate(TermitePrefab, RandomPosition(), Quaternion.identity);
+            Instantiate(TermitePrefab, RandomSpawnDirection(), Quaternion.identity);
             i++;
         }
         
