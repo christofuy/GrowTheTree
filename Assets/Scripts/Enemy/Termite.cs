@@ -32,5 +32,4 @@ public class Termite : Enemy
         float newAngle = (float)ScreenPositionTools.VectorToAngle(directionVector);
         spriteRenderer.transform.eulerAngles = new Vector3(0, 0, newAngle - 180);
     }
-
 }
