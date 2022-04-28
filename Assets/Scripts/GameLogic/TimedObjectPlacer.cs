@@ -8,6 +8,7 @@ public class TimedObjectPlacer : MonoBehaviour
     public GameObject Prefab;
     private int secondsUntilNextCreation;
     private bool isWaitingToCreate = false;
+    public Camera viewcamera;
 
     protected int minimumTimeToCreation = 1;
     protected int maximumTimeToCreation = 2;
@@ -32,7 +33,7 @@ public class TimedObjectPlacer : MonoBehaviour
 
     protected virtual void Place()
     {
-        Vector3 position = ScreenPositionTools.RandomWorldLocationNoCamera();
+        Vector3 position = ScreenPositionTools.RandomWorldLocation(viewcamera);
         Instantiate(Prefab, position, Quaternion.identity);
     }
 }

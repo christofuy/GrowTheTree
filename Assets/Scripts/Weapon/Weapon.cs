@@ -36,9 +36,9 @@ public class Weapon : MonoBehaviour
     }
 
     private void FireProjectile(){
-        GameObject projectile=Instantiate(weaponStats.projectilePrefab,attackSource.position,attackSource.rotation);
-        Rigidbody2D rb=projectile.GetComponent<Rigidbody2D>();
-        rb.AddForce(attackSource.up * weaponStats.projectileForce,ForceMode2D.Impulse);
+         GameObject projectile = Instantiate(weaponStats.projectilePrefab, attackSource.position, attackSource.rotation);
+         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+         rb.AddForce(attackSource.up * weaponStats.projectileForce, ForceMode2D.Impulse);
     }
 
     private void UpdateWeaponSprite(Sprite sprite){
