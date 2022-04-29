@@ -16,6 +16,18 @@ public static class GameParameters
     public static int MagicDrainRate = 2;
 
     //Termite Parameters
+    public static int TermiteMaxHealth = 40;
     public static int TermiteSpawnAmount = 5;
+    public static int TermiteAttackDamage = 10;
+
+    //Player Parameters
+    public static int PlayerMaxHealth = 100;
+    public static int PlayerMeleeDamage = 10;
+    public static int PlayerProjectileDamage = 20;
+
+    //Tree Parameters
+    public static int TreeLvl1MaxHealth = 100;
+    public static int TreeLvl2MMaxHealth = 200;
+    public static int TreeLvl3MaxHealth = 300;
 
 }
