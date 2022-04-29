@@ -796,6 +796,7 @@ GameObject:
   - component: {fileID: 915278736}
   - component: {fileID: 915278738}
   - component: {fileID: 915278739}
+  - component: {fileID: 915278740}
   m_Layer: 0
   m_Name: player_prototype
   m_TagString: Untagged
@@ -947,6 +948,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.46, y: 0.3803473}
   m_EdgeRadius: 0
+--- !u!114 &915278740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915278733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f64246acda2f4cc49e6bccf8c5cd508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magicbar: {fileID: 1192242389}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,6 +1192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1192242387}
   - component: {fileID: 1192242388}
+  - component: {fileID: 1192242389}
   m_Layer: 5
   m_Name: MagicBar
   m_TagString: Untagged
@@ -1257,6 +1272,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1192242389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192242386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0cad281c4ea4573a8a7621e7cca68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1192242388}
 --- !u!1 &1304850140
 GameObject:
   m_ObjectHideFlags: 0

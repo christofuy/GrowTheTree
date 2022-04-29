@@ -9,10 +9,11 @@ public static class GameParameters
     public static int FruitMaximumTimeToNextCreation = 6;
     public static int FruitSecondsOnScreen = 3;
 
+    //Magic Parameters
     public static int FruitGiveMagicPoints = 2;
     public static int CurrentMagic = 0;
     public static int MaxMagic = 100;
-
+    public static int MagicDrainRate = 2;
 
     //Termite Parameters
     public static int TermiteSpawnAmount = 5;

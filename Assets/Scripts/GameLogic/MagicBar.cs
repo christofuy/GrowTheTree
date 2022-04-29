@@ -7,35 +7,50 @@ public class MagicBar : MonoBehaviour
 {
     public Slider slider;
 
+    private int totalMagic = 0;
+
+    public void Start()
+    {
+        SetMaxMagic();
+    }
+
     public void SetMaxMagic()
     {
         slider.maxValue = GameParameters.MaxMagic;
-        slider.value = 0;
+        ShowMagic();
     }
 
-    public void SetMagic(int magic)
+    public void ShowMagic()
     {
-        slider.value = magic;
+        slider.value = totalMagic;
     }
 
-    public void GainMagic(int magic)
+    public void GainMagic()
     {
-        magic += 2;
-        SetMagic(magic);
+        totalMagic += 10;
+        print("+ Magic = " + totalMagic);
+        ShowMagic();
     }
 
-    public void LoseMagic(int magic)
+    public void LoseMagic()
     {
-        if (MagicMeterNotEmpty(magic))
+        if (MagicMeterNotEmpty())
         {
-            magic -= 2;
-            SetMagic(magic);
+            StartCoroutine(MagicDrain());
         }
     }
 
-    public bool MagicMeterNotEmpty(int currentMagic)
+    IEnumerator MagicDrain()
     {
-        if (currentMagic <= 0)
+        yield return new WaitForSeconds(GameParameters.MagicDrainRate);
+        totalMagic -= 10;
+        print("Magic drain, now has" + totalMagic + " magic");
+        ShowMagic();
+    }
+
+    public bool MagicMeterNotEmpty()
+    {
+        if (totalMagic <= 0)
         {
             return false;
         }
