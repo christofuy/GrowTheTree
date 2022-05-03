@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1128,7 +1128,7 @@ GameObject:
   - component: {fileID: 915278740}
   m_Layer: 0
   m_Name: player_prototype
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2042,7 +2042,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 394, y: 441}
+  m_AnchoredPosition: {x: 394, y: -400}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1768629501
@@ -2393,9 +2393,53 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2589776666992562346, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
+      propertyPath: m_Mass
+      value: 1000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589776666992562346, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589776666992562346, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
+      propertyPath: m_LinearDrag
+      value: 1000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589776666992562346, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854871408739480388, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
+      propertyPath: m_Size.x
+      value: 1.6138682
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854871408739480388, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.9721249
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854871408739480388, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.05498779
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854871408739480388, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.000000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854871408739480388, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6854871408739480392, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
       propertyPath: m_Name
       value: small_tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854871408739480392, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6854871408739480392, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
+      propertyPath: m_TagString
+      value: Tree
       objectReference: {fileID: 0}
     - target: {fileID: 6854871408739480394, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
       propertyPath: m_RootOrder

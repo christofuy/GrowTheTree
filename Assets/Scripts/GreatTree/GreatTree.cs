@@ -19,6 +19,12 @@ public class GreatTree : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        uiTreeHealth.text = "Tree Health: "+currentHealth;
+        uiTreeHealth.text = "Tree Health: " + currentHealth;
+    }
+
+    public void UpdateHealthOnAttack(int damage)
+    {
+        currentHealth -= damage;
+        uiTreeHealth.text = "Tree Health: " + currentHealth;
     }
 }
