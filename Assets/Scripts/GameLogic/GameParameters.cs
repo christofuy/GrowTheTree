@@ -17,7 +17,7 @@ public static class GameParameters
 
     //Termite Parameters
     public static int TermiteMaxHealth = 40;
-    public static int TermiteSpawnAmount = 1;
+    public static int TermiteSpawnAmount = 5;
     public static int TermiteAttackDamage = 10;
 
     //Player Parameters
