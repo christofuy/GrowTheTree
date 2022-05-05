@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Stick
   type: 0
-  sprite: {fileID: 21300000, guid: 9c6340c6b80ac4e1987f630265991226, type: 3}
-  damageModifier: 50
-  meleeAttackRange: 0.5
+  sprite: {fileID: 21300000, guid: 43427bdd4219d48ecad0c60fb5218082, type: 3}
+  attackRate: 1
+  damageModifier: 10
+  meleeAttackRange: 0.4
   projectileForce: 20
   projectilePrefab: {fileID: 0}
