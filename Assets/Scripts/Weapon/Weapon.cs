@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    public Animator animator;
     public Transform attackSource;
     public WeaponStats weaponStats;
     public SpriteRenderer sr;
+    private float nextAttackTime = 0f;
 
     void Start(){
         UpdateWeaponSprite(weaponStats.sprite);
     }
 
     public void Attack(LayerMask enemyLayers){
+        if(!CanAttack()) return;
         switch(weaponStats.type){
             case WeaponType.MELEE:
                 MeleeAttack(enemyLayers);
@@ -19,6 +22,7 @@ public class Weapon : MonoBehaviour
                 FireProjectile();
                 break;
         }
+        UpdateNextAttackTime();
     }
 
     void OnDrawGizmosSelected(){
@@ -27,11 +31,11 @@ public class Weapon : MonoBehaviour
     }
 
     private void MeleeAttack(LayerMask enemyLayers){
-        Debug.Log("Melee Attack Ran");
+        animator.SetTrigger("Attack");
         Collider2D[] hitEnemies=Physics2D.OverlapCircleAll(attackSource.position,weaponStats.meleeAttackRange,enemyLayers);
-        foreach(Collider2D enemy in hitEnemies){
-            Debug.Log("We hit " + enemy.name);
-            enemy.GetComponent<Enemy>().TakeDamage(weaponStats.damageModifier);
+        if(hitEnemies.Length > 0){
+            Collider2D firstEnemy = hitEnemies[0];
+            firstEnemy.GetComponent<Enemy>().TakeDamage(weaponStats.damageModifier);
         }
     }
 
@@ -43,5 +47,13 @@ public class Weapon : MonoBehaviour
 
     private void UpdateWeaponSprite(Sprite sprite){
         sr.sprite=sprite;
+    }
+
+    private bool CanAttack(){
+        return Time.time >= nextAttackTime;
+    }
+
+    private void UpdateNextAttackTime(){
+        nextAttackTime = Time.time + 1f / weaponStats.attackRate;
     }
 }
