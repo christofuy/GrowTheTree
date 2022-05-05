@@ -1,13 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Termite : Enemy
 {
     public GameObject tree;
     public GameObject AttackPoint;
-
     public SpriteRenderer spriteRenderer;
+
+    private Animator animator;
+    private bool isWalking = false;
 
     public float speed = 1f;
     Vector3 target;
@@ -15,6 +15,7 @@ public class Termite : Enemy
 
     void Start()
     {
+        this.animator=gameObject.GetComponent<Animator>();
         target = new Vector3(tree.transform.position.x, tree.transform.position.y, tree.transform.position.z);
     }
 
@@ -26,6 +27,10 @@ public class Termite : Enemy
 
     private void MoveToTarget(Vector3 target)
     {
+        bool wasWalking=this.isWalking;
+        this.isWalking=true;
+        if(!wasWalking)
+            this.animator.SetBool("isWalking",true);
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
     }
 
