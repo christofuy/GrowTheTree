@@ -130,7 +130,6 @@ MonoBehaviour:
   tree: {fileID: 6854871408739480392, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
   AttackPoint: {fileID: 7252203903823127140}
   spriteRenderer: {fileID: 983462006942731152}
-  animator: {fileID: 983462006942731155}
   speed: 1
 --- !u!50 &2532918513063867358
 Rigidbody2D:

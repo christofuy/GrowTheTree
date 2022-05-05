@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public MagicBar magicbar;
+    public PlayerHealthBar playerhealth;
 
     void Start()
     {
@@ -23,5 +24,16 @@ public class Player : MonoBehaviour
             magicbar.GainMagic();
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "Enemy")
+        {
+            playerhealth.LosePlayerHealth();
+            print("Player was attacked!");
+            StartCoroutine(WaitToBeDamaged());
+        }
+    }
+
+    IEnumerator WaitToBeDamaged()
+    {
+        yield return new WaitForSeconds(1);
     }
 }
