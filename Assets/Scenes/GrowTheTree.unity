@@ -1883,7 +1883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b977cde5f98614b3c83ac7dbc92e014f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TermitePrefab: {fileID: 6729255319502122441, guid: 3ada81e5107294d3ca43086305228f61, type: 3}
+  TermitePrefab: {fileID: 983462006942731154, guid: 3ada81e5107294d3ca43086305228f61, type: 3}
   viewcamera: {fileID: 963194227}
 --- !u!4 &1304850142
 Transform:
