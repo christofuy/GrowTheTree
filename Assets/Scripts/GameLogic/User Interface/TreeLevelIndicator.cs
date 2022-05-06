@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyCounter : MonoBehaviour
+public class TreeLevelIndicator : MonoBehaviour
 {
-    public Text counter;
-    public GameObject[] enemies;
-
-    int count;
+    public Text leveltext;
+    public GreatTree GreatTree;
 
     // Start is called before the first frame update
     void Start()
@@ -19,11 +17,12 @@ public class EnemyCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        leveltext.text = "TreeLevel: " + GreatTree.CheckTreeLevel();
 
-        count = enemies.Length;
-        counter.text = "Enemies On Screen: " + count;
+
     }
+
+
 
     
 }

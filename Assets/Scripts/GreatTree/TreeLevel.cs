@@ -10,8 +10,5 @@ public class TreeLevel : MonoBehaviour
         //start as lvl 1 tree
     }
 
-    public void CheckTreeLevel()
-    {
 
-    }
 }

@@ -12,7 +12,8 @@ public class TermitePlacer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Place(GameParameters.TermiteSpawnAmount);
+        //Place(GameParameters.TermiteSpawnAmount);
+        //We are letting the Waves class handle spawning for each wave
     }
 
     // Update is called once per frame
@@ -46,7 +47,6 @@ public class TermitePlacer : MonoBehaviour
         {
             print("There was an error in generating a randomized spawn direction");
         }
-        print("Direction = " + finalDirection);
         Vector3 spawn = ScreenPositionTools.RandomEdgeOfScreenWorldLocation(viewcamera, finalDirection);
         return spawn;
     }
