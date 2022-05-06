@@ -38,6 +38,7 @@ public class PlayerHealthBar : MonoBehaviour
         {
             totalPlayerHealth -= GameParameters.TermiteAttackDamage;
             print("Lost health! Current health:" + totalPlayerHealth);
+            ShowPlayerHealth();
         }
     }
 

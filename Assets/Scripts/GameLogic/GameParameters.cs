@@ -27,7 +27,7 @@ public static class GameParameters
 
     //Tree Parameters
     public static int TreeLvl1MaxHealth = 100;
-    public static int TreeLvl2MMaxHealth = 200;
+    public static int TreeLvl2MaxHealth = 200;
     public static int TreeLvl3MaxHealth = 300;
 
 }

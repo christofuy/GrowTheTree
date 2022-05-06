@@ -34,6 +34,6 @@ public class Player : MonoBehaviour
 
     IEnumerator WaitToBeDamaged()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
     }
 }
