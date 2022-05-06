@@ -1270,8 +1270,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b95e2cb2b4a4d0b960dc0a55c2c4d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: {fileID: 0}
-  isStart: 0
+  title: {fileID: 823733834}
+  button: {fileID: 1696942775}
 --- !u!1 &846437144
 GameObject:
   m_ObjectHideFlags: 0
@@ -2444,7 +2444,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1696942778}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1696942777}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1696942778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2495,8 +2507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b95e2cb2b4a4d0b960dc0a55c2c4d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: {fileID: 0}
-  isStart: 1
+  title: {fileID: 823733834}
+  button: {fileID: 1696942775}
 --- !u!1 &1768629499
 GameObject:
   m_ObjectHideFlags: 0

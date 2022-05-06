@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class Game : MonoBehaviour
 {
     public GameObject title;
-    public bool isStart = false;
-    private GameObject button;
+    //public bool isStart = false;
+    public GameObject button;
 
     private void Start()
     {
-        button = GameObject.Find("PlayButton");
-        title = GameObject.Find("TitleText");
+        //button = GameObject.Find("Play Button");
+        //title = GameObject.Find("Title Text");
     }
 
     //This class is for things such as controlling what stage/wave you are on, things like game overs, etc
