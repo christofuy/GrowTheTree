@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class GreatTree : MonoBehaviour
 {
-    public Text uiTreeHealth;
+    public Text text_TreeHealth;
+    public Text text_TreeLevel;
 
     public int TreeLevel = 0;
 
@@ -22,13 +23,14 @@ public class GreatTree : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        uiTreeHealth.text = "Tree Health: " + currentHealth;
+        text_TreeHealth.text = "Tree Health: " + currentHealth;
+        text_TreeLevel.text = "Tree Level: " + CheckTreeLevel();
     }
 
     public void UpdateHealthOnAttack(int damage)
     {
         currentHealth -= damage;
-        uiTreeHealth.text = "Tree Health: " + currentHealth;
+        text_TreeHealth.text = "Tree Health: " + currentHealth;
     }
 
     public void TreeLevelUp()

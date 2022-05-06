@@ -515,7 +515,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1791935272}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1849,7 +1849,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2ad8c3d5d1d478d94efec91ac9d6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiTreeHealth: {fileID: 1768629501}
+  text_TreeHealth: {fileID: 1768629501}
+  text_TreeLevel: {fileID: 1970505138}
   TreeLevel: 0
   currentHealth: 0
 --- !u!1 &1081158574
@@ -2592,7 +2593,7 @@ GameObject:
   - component: {fileID: 1768629502}
   - component: {fileID: 1768629501}
   m_Layer: 5
-  m_Name: Tree Health
+  m_Name: '[Temp] Tree Health'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2610,7 +2611,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1791935272}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -2753,8 +2754,8 @@ RectTransform:
   - {fileID: 1905115222}
   - {fileID: 774406039}
   - {fileID: 1192242387}
-  - {fileID: 1768629500}
   - {fileID: 314844706}
+  - {fileID: 1768629500}
   - {fileID: 1970505136}
   - {fileID: 823733835}
   m_Father: {fileID: 0}
@@ -2879,9 +2880,8 @@ GameObject:
   - component: {fileID: 1970505136}
   - component: {fileID: 1970505139}
   - component: {fileID: 1970505138}
-  - component: {fileID: 1970505137}
   m_Layer: 5
-  m_Name: Tree Level
+  m_Name: '[Temp] Tree Level'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2906,20 +2906,6 @@ RectTransform:
   m_AnchoredPosition: {x: 100, y: 157.55}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1970505137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970505135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88c8c6c3c0338493a885f12be124a872, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leveltext: {fileID: 1970505138}
-  GreatTree: {fileID: 1069915271}
 --- !u!114 &1970505138
 MonoBehaviour:
   m_ObjectHideFlags: 0
