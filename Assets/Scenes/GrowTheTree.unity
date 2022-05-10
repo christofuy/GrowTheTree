@@ -1457,7 +1457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magicbar: {fileID: 1192242389}
   playerhealth: {fileID: 1905115223}
-  treehealth: {fileID: 0}
+  treehealth: {fileID: 774406040}
 --- !u!114 &915278741
 MonoBehaviour:
   m_ObjectHideFlags: 0
