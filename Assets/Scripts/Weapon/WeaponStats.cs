@@ -13,4 +13,5 @@ public class WeaponStats : ScriptableObject
     public float meleeAttackRange = 0.5f;
     public float projectileForce = 20f;
     public GameObject projectilePrefab;
+    public int mpCost = 0;
 }
