@@ -57,6 +57,8 @@ public class Waves : MonoBehaviour
         }
     }
 
+
+
     public void Wave(int num)
     {
         if (num==0)
