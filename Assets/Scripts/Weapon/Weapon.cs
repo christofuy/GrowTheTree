@@ -8,12 +8,11 @@ public class Weapon : MonoBehaviour
     public SpriteRenderer sr;
     private float nextAttackTime = 0f;
 
-    void Start(){
-        UpdateWeaponSprite(weaponStats.sprite);
-    }
-
     public void Attack(LayerMask enemyLayers){
         if(!CanAttack()) return;
+        if(animator){
+            animator.SetTrigger("Attack");
+        }
         switch(weaponStats.type){
             case WeaponType.MELEE:
                 MeleeAttack(enemyLayers);
@@ -31,7 +30,6 @@ public class Weapon : MonoBehaviour
     }
 
     private void MeleeAttack(LayerMask enemyLayers){
-        animator.SetTrigger("Attack");
         Collider2D[] hitEnemies=Physics2D.OverlapCircleAll(attackSource.position,weaponStats.meleeAttackRange,enemyLayers);
         if(hitEnemies.Length > 0){
             Collider2D firstEnemy = hitEnemies[0];
