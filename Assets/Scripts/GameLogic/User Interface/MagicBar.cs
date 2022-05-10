@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +11,14 @@ public class MagicBar : MonoBehaviour
     public void Start()
     {
         SetMaxMagic();
+    }
+
+    public int GetCurrMagicPoints(){
+        return this.totalMagic;
+    }
+
+    public void ConsumeMagicPoints(int mpConsumed){
+        this.totalMagic-=mpConsumed;
     }
 
     public void SetMaxMagic()
