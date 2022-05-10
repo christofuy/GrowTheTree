@@ -9,6 +9,24 @@ public static class GameParameters
     public static int FruitMaximumTimeToNextCreation = 6;
     public static int FruitSecondsOnScreen = 3;
 
+    //Poison
+    public static int PoisonMinimumTimeToNextCreation = 3;
+    public static int PoisonMaximumTimeToNextCreation = 6;
+    public static int PoisonSecondsOnScreen = 3;
+    //public static int PoisonDamage = 10;
+
+    //Petal
+    public static int PetalMinimumTimeToNextCreation = 8;
+    public static int PetalMaximumTimeToNextCreation = 12;
+    public static int PetalSecondsOnScreen = 3;
+    public static int PetalHealth = 10;
+
+    //Heart
+    public static int HeartMinimumTimeToNextCreation = 4;
+    public static int HeartMaximumTimeToNextCreation = 8;
+    public static int HeartSecondsOnScreen = 3;
+    public static int HeartHealth = 10;
+
     //Magic 
     public static int FruitGiveMagicPoints = 2;
     public static int CurrentMagic = 0;

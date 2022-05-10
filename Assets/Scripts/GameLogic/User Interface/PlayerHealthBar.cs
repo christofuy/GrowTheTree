@@ -27,9 +27,11 @@ public class PlayerHealthBar : MonoBehaviour
 
     public void GainPlayerHealth()
     {
-        totalPlayerHealth += 10;
-        print("+ Player Health = " + totalPlayerHealth);
-        ShowPlayerHealth();
+        if (!PlayerHealthMeterFull()){
+            totalPlayerHealth += GameParameters.HeartHealth;
+            print("+ Player Health = " + totalPlayerHealth);
+            ShowPlayerHealth();
+        }
     }
 
     public void LosePlayerHealth()
@@ -49,6 +51,15 @@ public class PlayerHealthBar : MonoBehaviour
             return false;
         }
         return true;
+    }
+
+    public bool PlayerHealthMeterFull()
+    {
+        if (totalPlayerHealth >= 100)
+        {
+            return true;
+        }
+        return false;
     }
 }
 

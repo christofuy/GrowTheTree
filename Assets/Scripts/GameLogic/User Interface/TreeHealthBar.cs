@@ -27,9 +27,12 @@ public class TreeHealthBar : MonoBehaviour
 
     public void GainTreeHealth()
     {
-        totalTreeHealth += 10;
-        print("+ Tree Health = " + totalTreeHealth);
-        ShowTreeHealth();
+        if (!TreeHealthMeterFull())
+        {
+            totalTreeHealth += GameParameters.PetalHealth;
+            print("+ Tree Health = " + totalTreeHealth);
+            ShowTreeHealth();
+        }
     }
 
     public void LoseTreeHealth()
@@ -49,5 +52,14 @@ public class TreeHealthBar : MonoBehaviour
             return false;
         }
         return true;
+    }
+
+    public bool TreeHealthMeterFull()
+    {
+        if (totalTreeHealth >= 100)
+        {
+            return true;
+        }
+        return false;
     }
 }

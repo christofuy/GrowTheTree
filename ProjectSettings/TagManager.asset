@@ -9,6 +9,9 @@ TagManager:
   - Enemy
   - TitleText
   - PlayButton
+  - Heart
+  - Petal
+  - Poison
   layers:
   - Default
   - TransparentFX

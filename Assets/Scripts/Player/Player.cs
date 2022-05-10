@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public MagicBar magicbar;
     public PlayerHealthBar playerhealth;
+    public TreeHealthBar treehealth;
 
     void Start()
     {
@@ -22,6 +23,23 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Fruit")
         {
             magicbar.GainMagic();
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "Heart")
+        {
+            playerhealth.GainPlayerHealth();
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "Petal")
+        {
+            treehealth.GainTreeHealth();
+            print("Tree gained 10 health!");
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "Poison")
+        {
+            playerhealth.LosePlayerHealth();
+            print("Player took poison!");
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Enemy")
