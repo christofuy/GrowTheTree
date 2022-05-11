@@ -15,6 +15,11 @@ public class GameProperties : MonoBehaviour
         //SceneManager.LoadScene("MainMenu");
     }
 
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene(mainmenu);
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene(lvl1);

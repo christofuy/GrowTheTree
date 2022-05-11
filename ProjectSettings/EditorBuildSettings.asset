@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: badcc18a154ee47da885d453e9823453
   - enabled: 1
+    path: Assets/Scenes/HowToPlay.unity
+    guid: 9d9588564c1a1439381c31c19113d27d
+  - enabled: 1
     path: Assets/Scenes/GrowTheTree.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 0c455474eaaa3493ba07c2bc77df8b99
   m_configObjects: {}
