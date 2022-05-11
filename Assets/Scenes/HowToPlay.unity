@@ -153,7 +153,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2099881299}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -405,7 +405,7 @@ RectTransform:
   m_Children:
   - {fileID: 588244939}
   m_Father: {fileID: 2099881299}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 628664577}
   - component: {fileID: 628664576}
   m_Layer: 5
-  m_Name: MainMenu
+  m_Name: HowToPlayMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -658,7 +658,7 @@ PrefabInstance:
       objectReference: {fileID: 628664576}
     - target: {fileID: 1565625562146807208, guid: 54827a23da0014a6ead89de5d9cb1341, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartGame
+      value: LoadMainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 1565625562146807208, guid: 54827a23da0014a6ead89de5d9cb1341, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -674,7 +674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1565625562146807209, guid: 54827a23da0014a6ead89de5d9cb1341, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1565625562146807209, guid: 54827a23da0014a6ead89de5d9cb1341, type: 3}
       propertyPath: m_AnchorMax.x
@@ -870,7 +870,7 @@ RectTransform:
   m_Children:
   - {fileID: 1869036345}
   m_Father: {fileID: 2099881299}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -946,7 +946,7 @@ RectTransform:
   m_Children:
   - {fileID: 1660219706}
   m_Father: {fileID: 2099881299}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1263,7 +1263,7 @@ RectTransform:
   m_Children:
   - {fileID: 1322807815}
   m_Father: {fileID: 2099881299}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1338,7 +1338,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2099881299}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1400,7 +1400,7 @@ GameObject:
   - component: {fileID: 2099881301}
   - component: {fileID: 2099881300}
   m_Layer: 5
-  m_Name: TitleText
+  m_Name: HowToPlay
   m_TagString: TitleText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1417,13 +1417,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1044291093}
   - {fileID: 3133957}
   - {fileID: 1980442358}
   - {fileID: 1897861623}
   - {fileID: 1522424255}
   - {fileID: 1386868756}
   - {fileID: 628279316}
+  - {fileID: 1044291093}
   m_Father: {fileID: 628664580}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
