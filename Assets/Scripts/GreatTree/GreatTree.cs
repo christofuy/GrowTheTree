@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class GreatTree : MonoBehaviour
 {
+    public SpriteRenderer TreeSpriteRenderer;
+    public Sprite TreeLv1;
+    public Sprite TreeLv2;
+    public Sprite TreeLv3;
+
     public Text text_TreeHealth;
     public Text text_TreeLevel;
 
@@ -36,6 +41,15 @@ public class GreatTree : MonoBehaviour
     public void TreeLevelUp()
     {
         TreeLevel++;
+        if (TreeLevel == 0) 
+            TreeSpriteRenderer.sprite = TreeLv1;
+        else if (TreeLevel == 1)
+            TreeSpriteRenderer.sprite = TreeLv1;
+        else if (TreeLevel == 2)
+            TreeSpriteRenderer.sprite = TreeLv2;
+        else if (TreeLevel == 3)
+            TreeSpriteRenderer.sprite = TreeLv3;
+
     }
 
     public int CheckTreeLevel()

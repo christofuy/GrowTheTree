@@ -57,6 +57,8 @@ public class Waves : MonoBehaviour
         }
     }
 
+
+
     public void Wave(int num)
     {
         if (num==0)
@@ -71,6 +73,11 @@ public class Waves : MonoBehaviour
         if (num == 2)
         {
             TermitePlacer.Place(GameParameters.TermiteSpawnAmount_W2);
+            isCurrentWaveActive = true;
+        }
+        if (num == 3)
+        {
+            TermitePlacer.Place(GameParameters.TermiteSpawnAmount_W3);
             isCurrentWaveActive = true;
         }
 

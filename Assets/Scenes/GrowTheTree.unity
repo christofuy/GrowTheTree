@@ -240,6 +240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: small_tree
       objectReference: {fileID: 0}
+    - target: {fileID: 6854871408739480393, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2e9b85bf1343a4091a74f778b4bd9068, type: 3}
     - target: {fileID: 6854871408739480394, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1757,7 +1761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.38998476, g: 1, b: 0.35294116, a: 1}
+  m_Color: {r: 0.90196085, g: 0.34509805, b: 0.7372549, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1963,6 +1967,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6854871408739480392, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
   m_PrefabInstance: {fileID: 54972586}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1069915269 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6854871408739480393, guid: b6e07d5719a1140ff81d9d9e7717108f, type: 3}
+  m_PrefabInstance: {fileID: 54972586}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1069915271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1975,6 +1984,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2ad8c3d5d1d478d94efec91ac9d6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TreeSpriteRenderer: {fileID: 1069915269}
+  TreeLv1: {fileID: 21300000, guid: 2e9b85bf1343a4091a74f778b4bd9068, type: 3}
+  TreeLv2: {fileID: 21300000, guid: 1e58dd2ac23db4638a422d3db235dda1, type: 3}
+  TreeLv3: {fileID: 21300000, guid: d53a3d946191a45b78f4152f2ce6a316, type: 3}
   text_TreeHealth: {fileID: 1768629501}
   text_TreeLevel: {fileID: 1970505138}
   TreeLevel: 0
