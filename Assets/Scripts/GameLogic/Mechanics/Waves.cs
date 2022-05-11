@@ -53,7 +53,14 @@ public class Waves : MonoBehaviour
         {
             isCurrentWaveActive = false;
             isCurrentWaveZeroed = true;
-            GreatTree.TreeLevelUp();
+                                              //Right now it's 3
+            if (GreatTree.CheckTreeLevel() == GameParameters.FinalTreeLevel)
+            {
+                print("YOU WON!");
+                //Show Victory Indicator
+            }
+            else
+                GreatTree.TreeLevelUp();
         }
     }
 

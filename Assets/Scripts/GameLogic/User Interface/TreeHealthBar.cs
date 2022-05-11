@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,12 +11,12 @@ public class TreeHealthBar : MonoBehaviour
 
     public void Start()
     {
-        SetMaxTreeHealth();
+        SetMaxTreeHealth(GameParameters.TreeLvl1MaxHealth);
     }
 
-    public void SetMaxTreeHealth()
+    public void SetMaxTreeHealth(int amount)
     {
-        slider.maxValue = GameParameters.TreeLvl2MaxHealth;
+        slider.maxValue = amount;
         ShowTreeHealth();
     }
 
