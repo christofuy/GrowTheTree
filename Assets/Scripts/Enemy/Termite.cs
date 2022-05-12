@@ -9,15 +9,16 @@ public class Termite : Enemy
     public float attackRange = 2f;
     public float attackRate = 1f;
     public int attackDamage = 10;
-    public float speed = 1f;
+    public float speed = 0.5f;
 
     private Animator animator;
     private bool isWalking = false;
     private bool isInRange = false;
     private float nextAttackTime = 0f;
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         this.animator=gameObject.GetComponent<Animator>();
         this.tree = GameObject.FindGameObjectWithTag("Tree");
         this.greatTree = tree.GetComponent<GreatTree>();
