@@ -25,24 +25,24 @@ public class Player : MonoBehaviour
             magicbar.GainMagic();
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.tag == "Heart")
+        else if (collision.gameObject.tag == "Heart")
         {
             playerhealth.GainPlayerHealth();
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.tag == "Petal")
+        else if (collision.gameObject.tag == "Petal")
         {
             treehealth.GainTreeHealth();
             print("Tree gained 10 health!");
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.tag == "Poison")
+        else if (collision.gameObject.tag == "Poison")
         {
             playerhealth.LosePlayerHealth();
             print("Player took poison!");
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.tag == "Enemy")
+        else if (collision.gameObject.tag == "Enemy")
         {
             playerhealth.LosePlayerHealth();
             print("Player was attacked!");
