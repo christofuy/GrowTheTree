@@ -14,6 +14,7 @@ public class TreeHealthBar : MonoBehaviour
     public void Start()
     {
         SetMaxTreeHealth(GameParameters.TreeLvl1MaxHealth);
+        currentTreeHealth = maximumTreeHealth;
     }
 
     void Update()
@@ -29,7 +30,6 @@ public class TreeHealthBar : MonoBehaviour
 
     public void UpdateTreeHealth()
     {
-        //print("Current Tree Health: " + currentTreeHealth);
         slider.value = currentTreeHealth;
     }
 
