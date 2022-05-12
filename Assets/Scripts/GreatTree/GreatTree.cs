@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class GreatTree : MonoBehaviour
@@ -36,8 +34,7 @@ public class GreatTree : MonoBehaviour
 
     public void UpdateHealthOnAttack(int damage)
     {
-        currentHealth -= damage;
-        text_TreeHealth.text = "Tree Health: " + currentHealth;
+        this.currentHealth -= damage;
     }
 
     public void TreeLevelUp()
