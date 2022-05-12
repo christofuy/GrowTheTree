@@ -22,7 +22,7 @@ public class GreatTree : MonoBehaviour
 
     void Update()
     {
-        text_TreeHealth.text = "Tree Health: " + TreeHealthBar.currentTreeHealth;
+        text_TreeHealth.text = ""+TreeHealthBar.currentTreeHealth;
         text_TreeLevel.text = "Tree Level: " + CheckTreeLevel();
     }
 

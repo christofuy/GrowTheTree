@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +6,7 @@ public class MagicBar : MonoBehaviour
 {
     public Slider slider;
 
-    private int totalMagic = 0;
+    private int currentMagic = 20;
 
     public void Start()
     {
@@ -14,11 +14,11 @@ public class MagicBar : MonoBehaviour
     }
 
     public int GetCurrMagicPoints(){
-        return this.totalMagic;
+        return this.currentMagic;
     }
 
     public void ConsumeMagicPoints(int mpConsumed){
-        this.totalMagic-=mpConsumed;
+        this.currentMagic-=mpConsumed;
         ShowMagic();
     }
 
@@ -30,13 +30,13 @@ public class MagicBar : MonoBehaviour
 
     public void ShowMagic()
     {
-        slider.value = totalMagic;
+        slider.value = currentMagic;
     }
 
     public void GainMagic()
     {
-        totalMagic += 10;
-        print("+ Magic = " + totalMagic);
+        currentMagic += 10;
+        print("+ Magic = " + currentMagic);
         ShowMagic();
     }
 
@@ -51,14 +51,14 @@ public class MagicBar : MonoBehaviour
     IEnumerator MagicDrain()
     {
         yield return new WaitForSeconds(GameParameters.MagicDrainRate);
-        totalMagic -= 10;
-        print("Magic drain, now has" + totalMagic + " magic");
+        currentMagic -= 10;
+        print("Magic drain, now has" + currentMagic + " magic");
         ShowMagic();
     }
 
     public bool MagicMeterNotEmpty()
     {
-        if (totalMagic <= 0)
+        if (currentMagic <= 0)
         {
             return false;
         }

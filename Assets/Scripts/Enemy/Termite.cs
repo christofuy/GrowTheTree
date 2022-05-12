@@ -9,7 +9,7 @@ public class Termite : Enemy
     public float attackRange = 2f;
     public float attackRate = 1f;
     public int attackDamage = 10;
-    public float speed = 1f;
+    public float speed = 0.5f;
 
     private Animator animator;
     private bool isWalking = false;
