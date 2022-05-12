@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
@@ -8,10 +6,9 @@ public class Enemy : MonoBehaviour
     private int currHealth;
     public GameObject deathEffect;
 
-    // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
-        currHealth = maxHealth;
+        this.currHealth = this.maxHealth;
     }
 
     public void TakeDamage(int damage){

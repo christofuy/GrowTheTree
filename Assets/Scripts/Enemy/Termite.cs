@@ -16,8 +16,9 @@ public class Termite : Enemy
     private bool isInRange = false;
     private float nextAttackTime = 0f;
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         this.animator=gameObject.GetComponent<Animator>();
         this.tree = GameObject.FindGameObjectWithTag("Tree");
         this.greatTree = tree.GetComponent<GreatTree>();
