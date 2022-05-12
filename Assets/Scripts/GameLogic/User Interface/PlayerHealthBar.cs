@@ -7,6 +7,8 @@ public class PlayerHealthBar : MonoBehaviour
 {
     public Slider slider;
 
+    public GameProperties gameproperties;
+
     private int totalPlayerHealth = 100;
 
     public void Start()
@@ -42,6 +44,8 @@ public class PlayerHealthBar : MonoBehaviour
             print("Lost health! Current health:" + totalPlayerHealth);
             ShowPlayerHealth();
         }
+        else
+            Die();
     }
 
     public bool PlayerHealthMeterNotEmpty()
@@ -60,6 +64,11 @@ public class PlayerHealthBar : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public void Die()
+    {
+        gameproperties.GameOver();
     }
 }
 

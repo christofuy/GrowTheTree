@@ -422,7 +422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1565625562146807206, guid: 54827a23da0014a6ead89de5d9cb1341, type: 3}
       propertyPath: m_Name
-      value: HowToPlay
+      value: Quit
       objectReference: {fileID: 0}
     - target: {fileID: 1565625562146807208, guid: 54827a23da0014a6ead89de5d9cb1341, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

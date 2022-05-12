@@ -10,9 +10,10 @@ public class GameProperties : MonoBehaviour
     public string howtoplay;
     public string gameover;
 
+    private PlayerHealthBar playerhealthbar;
+
     private void Start()
     {
-        //SceneManager.LoadScene("MainMenu");
     }
 
     public void LoadMainMenu()
