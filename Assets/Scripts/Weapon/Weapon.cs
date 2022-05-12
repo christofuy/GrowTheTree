@@ -32,8 +32,10 @@ public class Weapon : MonoBehaviour
     private void MeleeAttack(LayerMask enemyLayers){
         Collider2D[] hitEnemies=Physics2D.OverlapCircleAll(attackSource.position,weaponStats.meleeAttackRange,enemyLayers);
         if(hitEnemies.Length > 0){
-            Collider2D firstEnemy = hitEnemies[0];
-            firstEnemy.GetComponent<Enemy>().TakeDamage(weaponStats.damageModifier);
+            Enemy firstEnemy = hitEnemies[0].GetComponent<Enemy>();
+            if(firstEnemy){
+                firstEnemy.TakeDamage(weaponStats.damageModifier);
+            }
         }
     }
 
