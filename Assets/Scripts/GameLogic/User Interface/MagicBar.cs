@@ -19,6 +19,7 @@ public class MagicBar : MonoBehaviour
 
     public void ConsumeMagicPoints(int mpConsumed){
         this.totalMagic-=mpConsumed;
+        ShowMagic();
     }
 
     public void SetMaxMagic()
