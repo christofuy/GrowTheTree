@@ -10,8 +10,8 @@ public static class GameParameters
     public static int FruitSecondsOnScreen = 3;
 
     //Poison
-    public static int PoisonMinimumTimeToNextCreation = 3;
-    public static int PoisonMaximumTimeToNextCreation = 6;
+    public static int PoisonMinimumTimeToNextCreation = 2;
+    public static int PoisonMaximumTimeToNextCreation = 3;
     public static int PoisonSecondsOnScreen = 3;
     //public static int PoisonDamage = 10;
 
