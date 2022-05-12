@@ -1059,6 +1059,7 @@ GameObject:
   - component: {fileID: 774406039}
   - component: {fileID: 774406041}
   - component: {fileID: 774406040}
+  - component: {fileID: 774406042}
   m_Layer: 5
   m_Name: TreeBar
   m_TagString: Untagged
@@ -1100,6 +1101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 774406041}
+  greatTree: {fileID: 0}
+  currentTreeHealth: 0
+  maximumTreeHealth: 0
+  gameproperties: {fileID: 0}
 --- !u!114 &774406041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1151,6 +1156,23 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &774406042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774406038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60247d21fe4ea4933991aa8c26849a88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvl1: GrowTheTree
+  mainmenu: MainMenu
+  howtoplay: HowToPlay
+  gameover: GameOver
+  winscreen: 
 --- !u!1 &832073340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1206,7 @@ MonoBehaviour:
   mainmenu: MainMenu
   howtoplay: HowToPlay
   gameover: GameOver
+  winscreen: WinScreen
 --- !u!4 &832073342
 Transform:
   m_ObjectHideFlags: 0
@@ -3286,7 +3309,6 @@ MonoBehaviour:
   text_TreeHealth: {fileID: 1768629501}
   text_TreeLevel: {fileID: 1970505138}
   TreeLevel: 0
-  currentHealth: 100
 --- !u!4 &6148022328978692947
 Transform:
   m_ObjectHideFlags: 0

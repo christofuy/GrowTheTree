@@ -7,6 +7,7 @@ public class Waves : MonoBehaviour
     public TermitePlacer TermitePlacer;
     public EnemyCounter EnemyCounter;
     public GreatTree GreatTree;
+    public GameProperties gameproperties;
 
     public bool AfterInitialSpawn = false;
 
@@ -56,7 +57,9 @@ public class Waves : MonoBehaviour
                                               //Right now it's 3
             if (GreatTree.CheckTreeLevel() == GameParameters.FinalTreeLevel)
             {
-                print("YOU WON!");
+
+                //print("YOU WON!");
+                gameproperties.WinScreen();
                 //Show Victory Indicator
             }
             else

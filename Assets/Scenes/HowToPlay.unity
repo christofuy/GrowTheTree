@@ -486,6 +486,7 @@ MonoBehaviour:
   mainmenu: MainMenu
   howtoplay: HowToPlay
   gameover: GameOver
+  winscreen: WinScreen
 --- !u!114 &628664577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1448,6 +1449,7 @@ MonoBehaviour:
   mainmenu: 
   howtoplay: 
   gameover: 
+  winscreen: 
 --- !u!114 &2099881301
 MonoBehaviour:
   m_ObjectHideFlags: 0
