@@ -2,27 +2,38 @@
 
 public class Termite : Enemy
 {
-    public GameObject tree;
-    public GameObject AttackPoint;
+    GameObject tree;
+    GreatTree greatTree;
     public SpriteRenderer spriteRenderer;
+
+    public float attackRange = 2f;
+    public float attackRate = 1f;
+    public int attackDamage = 10;
+    public float speed = 1f;
 
     private Animator animator;
     private bool isWalking = false;
-
-    public float speed = 1f;
-    Vector3 target;
-
+    private bool isInRange = false;
+    private float nextAttackTime = 0f;
 
     void Start()
     {
         this.animator=gameObject.GetComponent<Animator>();
-        target = new Vector3(tree.transform.position.x, tree.transform.position.y, tree.transform.position.z);
+        this.tree = GameObject.FindGameObjectWithTag("Tree");
+        this.greatTree = tree.GetComponent<GreatTree>();
     }
 
     void Update()
     {
-        MoveToTarget(target);
-        Rotate(transform.position);
+        if(this.isInRange){
+            if(CanAttack())
+                this.Attack();
+        }else{
+            MoveToTarget(this.tree.transform.position);
+            float distance = Vector2.Distance(this.transform.position, tree.transform.position);
+            this.isInRange = distance < this.attackRange;
+            Rotate(transform.position);
+        }
     }
 
     private void MoveToTarget(Vector3 target)
@@ -38,5 +49,25 @@ public class Termite : Enemy
     {
         float newAngle = (float)ScreenPositionTools.VectorToAngle(directionVector);
         spriteRenderer.transform.eulerAngles = new Vector3(0, 0, newAngle - 180);
+    }
+
+    private void Attack(){
+        bool wasWalking = this.isWalking;
+        this.isWalking=false;
+        if(wasWalking)
+            animator.SetBool("isWalking",false);
+        animator.SetTrigger("Attack");
+
+        this.greatTree.UpdateHealthOnAttack(attackDamage);
+
+        UpdateNextAttackTime();
+    }
+
+    private bool CanAttack(){
+        return Time.time >= nextAttackTime;
+    }
+
+    private void UpdateNextAttackTime(){
+        this.nextAttackTime = Time.time + 1f / this.attackRate;
     }
 }
