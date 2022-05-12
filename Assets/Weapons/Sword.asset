@@ -16,7 +16,8 @@ MonoBehaviour:
   type: 0
   sprite: {fileID: 7464635385722817273, guid: 05d01e179acd4417094ea037aa66cb2b, type: 3}
   attackRate: 2
-  damageModifier: 50
+  damageModifier: 100
   meleeAttackRange: 0.5
   projectileForce: 20
   projectilePrefab: {fileID: 0}
+  mpCost: 0
