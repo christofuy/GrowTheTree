@@ -8,8 +8,8 @@ public class Weapon : MonoBehaviour
     public SpriteRenderer sr;
     private float nextAttackTime = 0f;
 
-    public void Attack(LayerMask enemyLayers){
-        if(!CanAttack()) return;
+    public bool Attack(LayerMask enemyLayers){
+        if(!CanAttack()) return false;
         if(animator){
             animator.SetTrigger("Attack");
         }
@@ -22,6 +22,7 @@ public class Weapon : MonoBehaviour
                 break;
         }
         UpdateNextAttackTime();
+        return true;
     }
 
     void OnDrawGizmosSelected(){

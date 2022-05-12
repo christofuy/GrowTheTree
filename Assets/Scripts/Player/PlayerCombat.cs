@@ -13,8 +13,9 @@ public class PlayerCombat : MonoBehaviour
             primaryWeapon.Attack(enemyLayers);
         }else if (Input.GetButtonDown("Fire2")){
             if(magicBar.GetCurrMagicPoints() >= secondaryWeapon.weaponStats.mpCost){
-                secondaryWeapon.Attack(enemyLayers);
-                magicBar.ConsumeMagicPoints(secondaryWeapon.weaponStats.mpCost);
+                bool didAttack = secondaryWeapon.Attack(enemyLayers);
+                if(didAttack)
+                    magicBar.ConsumeMagicPoints(secondaryWeapon.weaponStats.mpCost);
             }
         }
     }
