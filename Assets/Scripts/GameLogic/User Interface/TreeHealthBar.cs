@@ -6,32 +6,47 @@ using UnityEngine.UI;
 public class TreeHealthBar : MonoBehaviour
 {
     public Slider slider;
+    public GreatTree greatTree;
 
-    private int totalTreeHealth = 100;
+    public int currentTreeHealth;
+    public int maximumTreeHealth;
 
     public void Start()
     {
         SetMaxTreeHealth(GameParameters.TreeLvl1MaxHealth);
     }
 
+    void Update()
+    {
+        UpdateTreeHealth();
+    }
+
     public void SetMaxTreeHealth(int amount)
     {
         slider.maxValue = amount;
-        ShowTreeHealth();
+        maximumTreeHealth = amount;
     }
 
-    public void ShowTreeHealth()
+    public void UpdateTreeHealth()
     {
-        slider.value = totalTreeHealth;
+        //print("Current Tree Health: " + currentTreeHealth);
+        slider.value = currentTreeHealth;
     }
 
+    public void FillToMax()
+    {
+        currentTreeHealth = maximumTreeHealth;
+    }
+
+    //GAINING + LOSING HEALTH
+    //& the Checks and Balances Involved in Doing So
     public void GainTreeHealth()
     {
         if (!TreeHealthMeterFull())
         {
-            totalTreeHealth += GameParameters.PetalHealth;
-            print("+ Tree Health = " + totalTreeHealth);
-            ShowTreeHealth();
+            currentTreeHealth += GameParameters.PetalHealth;
+            print("+ Tree Health = " + currentTreeHealth);
+            UpdateTreeHealth();
         }
     }
 
@@ -39,15 +54,15 @@ public class TreeHealthBar : MonoBehaviour
     {
         if (TreeHealthMeterNotEmpty())
         {
-            totalTreeHealth -= GameParameters.TermiteAttackDamage;
-            print("Lost health! Current TREE health:" + totalTreeHealth);
-            ShowTreeHealth();
+            currentTreeHealth -= GameParameters.TermiteAttackDamage;
+            print("Lost health! Current TREE health:" + currentTreeHealth);
+            UpdateTreeHealth();
         }
     }
 
     public bool TreeHealthMeterNotEmpty()
     {
-        if (totalTreeHealth <= 0)
+        if (currentTreeHealth <= 0)
         {
             return false;
         }
@@ -56,7 +71,7 @@ public class TreeHealthBar : MonoBehaviour
 
     public bool TreeHealthMeterFull()
     {
-        if (totalTreeHealth >= 100)
+        if (currentTreeHealth >= 100)
         {
             return true;
         }

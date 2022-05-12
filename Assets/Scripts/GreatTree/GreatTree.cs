@@ -15,26 +15,20 @@ public class GreatTree : MonoBehaviour
 
     public int TreeLevel = 0;
 
-    //private int TreeHealth = 1000;
-    public int currentHealth;
-
-    // Start is called before the first frame update
     void Start()
     {
-        currentHealth = 100;
         TreeLevel = 1;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        text_TreeHealth.text = "Tree Health: " + currentHealth;
+        text_TreeHealth.text = "Tree Health: " + TreeHealthBar.currentTreeHealth;
         text_TreeLevel.text = "Tree Level: " + CheckTreeLevel();
     }
 
     public void UpdateHealthOnAttack(int damage)
     {
-        this.currentHealth -= damage;
+        TreeHealthBar.currentTreeHealth -= damage;
     }
 
     public void TreeLevelUp()
@@ -50,11 +44,15 @@ public class GreatTree : MonoBehaviour
         else if (TreeLevel == 2)
         {
             TreeSpriteRenderer.sprite = TreeLv2;
+            TreeHealthBar.SetMaxTreeHealth(GameParameters.TreeLvl2MaxHealth);
         }
         else if (TreeLevel == 3)
         {
             TreeSpriteRenderer.sprite = TreeLv3;
+            TreeHealthBar.SetMaxTreeHealth(GameParameters.TreeLvl3MaxHealth);
         }
+
+        TreeHealthBar.FillToMax();
     }
 
     public int CheckTreeLevel()
