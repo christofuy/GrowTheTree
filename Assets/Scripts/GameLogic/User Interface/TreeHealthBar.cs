@@ -21,7 +21,15 @@ public class TreeHealthBar : MonoBehaviour
 
     void Update()
     {
-        UpdateTreeHealth();
+        if (currentTreeHealth <= 0)
+        {
+            gameproperties.GameOver();
+        }
+        else
+        {
+            UpdateTreeHealth();
+        }
+        
     }
 
     public void SetMaxTreeHealth(int amount)
@@ -50,10 +58,6 @@ public class TreeHealthBar : MonoBehaviour
             print("+ Tree Health = " + currentTreeHealth);
             UpdateTreeHealth();
         }
-        else
-        {
-            TreeDie();
-        }
     }
 
     public void LoseTreeHealth()
@@ -64,6 +68,8 @@ public class TreeHealthBar : MonoBehaviour
             print("Lost health! Current TREE health:" + currentTreeHealth);
             UpdateTreeHealth();
         }
+        else
+            TreeDie();
     }
 
     public bool TreeHealthMeterNotEmpty()
