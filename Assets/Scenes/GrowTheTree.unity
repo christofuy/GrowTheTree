@@ -1101,10 +1101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 774406041}
-  greatTree: {fileID: 0}
+  greatTree: {fileID: 6148022328978692946}
   currentTreeHealth: 0
   maximumTreeHealth: 0
-  gameproperties: {fileID: 0}
+  gameproperties: {fileID: 832073341}
 --- !u!114 &774406041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2285,7 +2285,7 @@ MonoBehaviour:
   TermitePlacer: {fileID: 1304850141}
   EnemyCounter: {fileID: 314844707}
   GreatTree: {fileID: 6148022328978692946}
-  gameproperties: {fileID: 0}
+  gameproperties: {fileID: 832073341}
   AfterInitialSpawn: 0
   isCurrentWaveActive: 0
   isCurrentWaveZeroed: 0
