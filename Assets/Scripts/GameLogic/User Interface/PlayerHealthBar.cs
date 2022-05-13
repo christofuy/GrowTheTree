@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +9,7 @@ public class PlayerHealthBar : MonoBehaviour
 
     public GameProperties gameproperties;
 
-    private int totalPlayerHealth = 100;
+    public int totalPlayerHealth = 100;
 
     public void Start()
     {
@@ -25,6 +25,11 @@ public class PlayerHealthBar : MonoBehaviour
     public void ShowPlayerHealth()
     {
         slider.value = totalPlayerHealth;
+    }
+
+    public float GetPlayerHealth()
+    {
+        return slider.value;
     }
 
     public void GainPlayerHealth()

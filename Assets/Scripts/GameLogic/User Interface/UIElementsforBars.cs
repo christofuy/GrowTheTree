@@ -25,7 +25,7 @@ public class UIElementsforBars : MonoBehaviour
     void Update()
     {
         text_TreeHealth.text = "" + TreeHealthBar.currentTreeHealth;
-        text_PlayerMagic.text = "";
-        text_PlayerHealth.text = "";
+        text_PlayerMagic.text = "" + MagicBar.GetCurrMagicPoints(); 
+        text_PlayerHealth.text = "" + PlayerHealthBar.GetPlayerHealth();
     }
 }

@@ -6,7 +6,7 @@ public class MagicBar : MonoBehaviour
 {
     public Slider slider;
 
-    private int currentMagic = 20;
+    public int currentMagic = 20;
 
     public void Start()
     {
@@ -14,11 +14,11 @@ public class MagicBar : MonoBehaviour
     }
 
     public int GetCurrMagicPoints(){
-        return this.currentMagic;
+        return currentMagic;
     }
 
     public void ConsumeMagicPoints(int mpConsumed){
-        this.currentMagic-=mpConsumed;
+        currentMagic-=mpConsumed;
         ShowMagic();
     }
 
