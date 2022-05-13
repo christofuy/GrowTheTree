@@ -21,7 +21,15 @@ public class TreeHealthBar : MonoBehaviour
 
     void Update()
     {
-        UpdateTreeHealth();
+        if (currentTreeHealth <= 0)
+        {
+            gameproperties.GameOver();
+        }
+        else
+        {
+            UpdateTreeHealth();
+        }
+        
     }
 
     public void SetMaxTreeHealth(int amount)
