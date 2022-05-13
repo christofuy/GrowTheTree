@@ -50,10 +50,6 @@ public class TreeHealthBar : MonoBehaviour
             print("+ Tree Health = " + currentTreeHealth);
             UpdateTreeHealth();
         }
-        else
-        {
-            TreeDie();
-        }
     }
 
     public void LoseTreeHealth()
@@ -64,6 +60,8 @@ public class TreeHealthBar : MonoBehaviour
             print("Lost health! Current TREE health:" + currentTreeHealth);
             UpdateTreeHealth();
         }
+        else
+            TreeDie();
     }
 
     public bool TreeHealthMeterNotEmpty()
