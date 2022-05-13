@@ -11,6 +11,8 @@ public class TreeHealthBar : MonoBehaviour
     public int currentTreeHealth;
     public int maximumTreeHealth;
 
+    public GameProperties gameproperties;
+
     public void Start()
     {
         SetMaxTreeHealth(GameParameters.TreeLvl1MaxHealth);
@@ -48,6 +50,10 @@ public class TreeHealthBar : MonoBehaviour
             print("+ Tree Health = " + currentTreeHealth);
             UpdateTreeHealth();
         }
+        else
+        {
+            TreeDie();
+        }
     }
 
     public void LoseTreeHealth()
@@ -77,4 +83,11 @@ public class TreeHealthBar : MonoBehaviour
         }
         return false;
     }
+
+    public void TreeDie()
+    {
+        gameproperties.GameOver();
+    }
+
+
 }

@@ -19,7 +19,6 @@ public class Enemy : MonoBehaviour
     }
 
     private void Die(){
-        Debug.Log("Enemy Died");
         Destroy(gameObject);
         Instantiate(deathEffect,transform.position,Quaternion.identity);
     }

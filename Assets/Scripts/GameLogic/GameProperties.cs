@@ -9,6 +9,7 @@ public class GameProperties : MonoBehaviour
     public string mainmenu;
     public string howtoplay;
     public string gameover;
+    public string winscreen;
 
     private PlayerHealthBar playerhealthbar;
 
@@ -34,6 +35,11 @@ public class GameProperties : MonoBehaviour
     public void GameOver()
     {
         SceneManager.LoadScene(gameover);
+    }
+
+    public void WinScreen()
+    {
+        SceneManager.LoadScene(winscreen);
     }
 
     public void QuitGame()

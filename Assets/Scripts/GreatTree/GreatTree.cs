@@ -10,7 +10,7 @@ public class GreatTree : MonoBehaviour
 
     public TreeHealthBar TreeHealthBar;
 
-    public Text text_TreeHealth;
+
     public Text text_TreeLevel;
 
     public int TreeLevel = 0;
@@ -22,7 +22,7 @@ public class GreatTree : MonoBehaviour
 
     void Update()
     {
-        text_TreeHealth.text = "Tree Health: " + TreeHealthBar.currentTreeHealth;
+        
         text_TreeLevel.text = "Tree Level: " + CheckTreeLevel();
     }
 
