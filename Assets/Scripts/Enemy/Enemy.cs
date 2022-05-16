@@ -19,7 +19,9 @@ public class Enemy : MonoBehaviour
     }
 
     private void Die(){
+        //SoundManager.PlaySound("termitedeath");
         Destroy(gameObject);
+        SoundManager.PlaySound("termitedeath");
         Instantiate(deathEffect,transform.position,Quaternion.identity);
     }
 }

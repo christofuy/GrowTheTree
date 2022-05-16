@@ -63,6 +63,7 @@ public class Waves : MonoBehaviour
                 //Show Victory Indicator
             }
             else
+                SoundManager.PlaySound("treelvlup");
                 GreatTree.TreeLevelUp();
         }
     }

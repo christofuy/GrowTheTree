@@ -22,22 +22,26 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Fruit")
         {
+            SoundManager.PlaySound("collect");
             magicbar.GainMagic();
             Destroy(collision.gameObject);
         }
         else if (collision.gameObject.tag == "Heart")
         {
+            SoundManager.PlaySound("collect");
             playerhealth.GainPlayerHealth();
             Destroy(collision.gameObject);
         }
         else if (collision.gameObject.tag == "Petal")
         {
+            SoundManager.PlaySound("collect");
             treehealth.GainTreeHealth();
             print("Tree gained 10 health!");
             Destroy(collision.gameObject);
         }
         else if (collision.gameObject.tag == "Poison")
         {
+            SoundManager.PlaySound("poisoncollect");
             playerhealth.LosePlayerHealth();
             print("Player took poison!");
             Destroy(collision.gameObject);

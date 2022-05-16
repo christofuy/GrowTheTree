@@ -15,9 +15,11 @@ public class Weapon : MonoBehaviour
         }
         switch(weaponStats.type){
             case WeaponType.MELEE:
+                SoundManager.PlaySound("swordswing");
                 MeleeAttack(enemyLayers);
                 break;
             case WeaponType.RANGED:
+                SoundManager.PlaySound("magicshoot");
                 FireProjectile();
                 break;
         }
