@@ -91,7 +91,6 @@ GameObject:
   - component: {fileID: 1565625562146807210}
   - component: {fileID: 1565625562146807211}
   - component: {fileID: 1565625562146807208}
-  - component: {fileID: 1565625562146807213}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: PlayButton
@@ -213,17 +212,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1565625562146807213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565625562146807206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64b95e2cb2b4a4d0b960dc0a55c2c4d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: {fileID: 0}
-  button: {fileID: 1565625562146807206}

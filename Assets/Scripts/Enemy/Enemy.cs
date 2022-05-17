@@ -2,8 +2,11 @@
 
 public class Enemy : MonoBehaviour
 {
+    
+
     public int maxHealth = 100;
     private int currHealth;
+
     public GameObject deathEffect;
 
     protected virtual void Start()
@@ -19,9 +22,7 @@ public class Enemy : MonoBehaviour
     }
 
     private void Die(){
-        //SoundManager.PlaySound("termitedeath");
         Destroy(gameObject);
-        SoundManager.PlaySound("termitedeath");
         Instantiate(deathEffect,transform.position,Quaternion.identity);
     }
 }

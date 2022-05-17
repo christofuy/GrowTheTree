@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class EnemyCounter : MonoBehaviour
 {
+
     public Text counter;
     public GameObject[] enemies;
 
