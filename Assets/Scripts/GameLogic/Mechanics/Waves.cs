@@ -25,6 +25,7 @@ public class Waves : MonoBehaviour
     void Start()
     {
         Wave(currentWaveNumber);
+
     }
 
     // Update is called once per frame
@@ -36,7 +37,6 @@ public class Waves : MonoBehaviour
             {
                 ZeroWave();
                 currentWaveNumber++;
-                print("CurrentWave Number = " + currentWaveNumber);
             }
             else if (isCurrentWaveActive == false)
             {
@@ -58,7 +58,6 @@ public class Waves : MonoBehaviour
             if (GreatTree.CheckTreeLevel() == GameParameters.FinalTreeLevel)
             {
 
-                //print("YOU WON!");
                 gameproperties.WinScreen();
                 //Show Victory Indicator
             }

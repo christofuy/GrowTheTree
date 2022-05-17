@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73bfcf4a5683a4ac3b5a3a8f64741c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 50
   deathEffect: {fileID: 8316886109341123589, guid: 19b8d3776ebee4633ace8ad6cedb90d4, type: 3}
   spriteRenderer: {fileID: 983462006942731152}
   attackRange: 2
